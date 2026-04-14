@@ -271,7 +271,7 @@ function ativo_2 () {
 
 let verific = () => {
     if (NPCPego.length == itensPego.length){
-        resultAmbos += 1; 
+        //resultAmbos += 1; 
     }
     //inv.style.display = 'flex';
   if (resultAmbos >= 3){
