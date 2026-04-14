@@ -1,0 +1,81 @@
+const sobrenomes = [
+  "Silva",
+  "Santos",
+  "Oliveira",
+  "Pereira",
+  "Costa",
+  "Rodrigues",
+  "Alves",
+  "Lima",
+  "Gomes",
+  "Ribeiro",
+  "Carvalho",
+  "Souza",
+  "Fernandes",
+  "Araujo",
+  "Rocha",
+  "Martins",
+  "Barbosa",
+  "Nogueira",
+  "Teixeira",
+  "Correia",
+  "Batista",
+  "Melo",
+  "Freitas",
+  "Pacheco",
+  "Farias",
+  "Moura",
+  "Cavalcante",
+  "Monteiro",
+  "Cardoso",
+  "Rangel",
+  "Gapriuna",
+  "Camara",
+  "Ferreira",
+  "Prado",
+];
+const names = [
+  "João",
+  "Maria",
+  "Pedro",
+  "Ana",
+  "Lucas",
+  "Gabriel",
+  "Rafael",
+  "Daniel",
+  "Matheus",
+  "Bruno",
+  "Felipe",
+  "Thiago",
+  "Carlos",
+  "André",
+  "Eduardo",
+  "Marcos",
+  "Paulo",
+  "Ricardo",
+  "Fernando",
+  "Rodrigo",
+  "João Pedro",
+  "João Victor",
+  "Maria Clara",
+  "Maria Eduarda",
+  "Ana Paula",
+  "Ana Luiza",
+  "Luiz Henrique",
+  "José Carlos",
+  "Pedro Henrique",
+  "Mariana"
+];
+let nomeCompleto = () => {
+  let N = names[Math.floor(Math.random() * names.length)];
+  let SN = sobrenomes[Math.floor(Math.random() * sobrenomes.length)];
+  return {
+    'nome': N,
+    'SobreNomes': SN,
+    'nomeCompleto': N +' '+ SN,
+  }
+}
+
+//const nomeCompleto = `${nomes[Math.floor(Math.random() * nomes.length)]} ${sobrenomes[Math.floor(Math.random() * sobrenomes.length)]}`;
+console.log(nomeCompleto());
+console.log(nomeCompleto());
