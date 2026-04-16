@@ -270,37 +270,38 @@ function ativo_2 () {
 }
 
 let verific = () => {
-    if (NPCPego.length == itensPego.length){
-        //resultAmbos += 1; 
-    }
-    //inv.style.display = 'flex';
-  if (resultAmbos >= 3){
+
+  resultAmbos = Math.min(NPCPego.length, itensPego.length);
+
+  if (resultAmbos >= 4){
+    resultAmbos = 0;
+    B1inv.style.display = 'none';
+    B2inv.style.display = 'none';
+    B3inv.style.display = 'none';
+    inv.style.display = 'none';
+    NPCPego.length = 0;
+    itensPego.length = 0;
+  }
+  else if (resultAmbos >= 3){
+    inv.style.display = 'flex';
+    B1inv.style.display = 'block';
+    B2inv.style.display = 'block';
     B3inv.style.display = 'block';
-    //B2inv.style.display = 'block';
-    //B1inv.style.display = 'block';
   }
   else if (resultAmbos >= 2){
+    inv.style.display = 'flex';
+    B1inv.style.display = 'block';
     B2inv.style.display = 'block';
-    //B1inv.style.display = 'block';
   }
   else if (resultAmbos >= 1){
     inv.style.display = 'flex';
     B1inv.style.display = 'block';
   }
-  else if (resultAmbos >= 8 || resultAmbos == 0){
-    resultAmbos = 0;
-    B1inv.style.display = 'none';
-    B2inv.style.display = 'none';
-    B3inv.style.display = 'none';
-    NPCPego.length = 0;
-    itensPego.length = 0;  
-       
-  }
   else {
     B1inv.style.display = 'none';
     B2inv.style.display = 'none';
     B3inv.style.display = 'none';
-    inv.style.display = 'none'  
+    inv.style.display = 'none';
   }
 }
 let visu = () => {
@@ -308,6 +309,6 @@ let visu = () => {
 }
 let tst2 = setInterval(() =>{
      visu();
-     verific();
-}, 100);
+     //verific();
+}, 500);
 
